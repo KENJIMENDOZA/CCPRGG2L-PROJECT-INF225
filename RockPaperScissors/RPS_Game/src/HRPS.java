@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-
 public class HRPS extends JFrame implements ActionListener {
     private JButton rockButton;
     private JButton paperButton;
@@ -14,12 +13,10 @@ public class HRPS extends JFrame implements ActionListener {
     private JLabel resultLabel;
     private JButton Yes;
     private JButton No;
+    private JLabel playerScoreD;
+    private int playerScore;
     Container c = getContentPane();
-
     
-
-
-
 
     static Color GBGC;
 
@@ -28,7 +25,6 @@ public class HRPS extends JFrame implements ActionListener {
         this.setFocusable(true);
         Game();
     }
-
 
 
     public void Game() {
@@ -95,11 +91,19 @@ public class HRPS extends JFrame implements ActionListener {
 
         // Create the result label
         resultLabel = new JLabel();
+        playerScoreD = new JLabel("Score: " + playerScore);
+        playerScoreD.setFont(new Font("Arial", Font.BOLD, 15));
+        playerScoreD.setVerticalTextPosition(JLabel.BOTTOM);
+        playerScoreD.setHorizontalTextPosition(JLabel.RIGHT);
+        playerScoreD.setHorizontalAlignment(JLabel.RIGHT);
+        playerScoreD.setVerticalTextPosition(JLabel.BOTTOM);
+        playerScoreD.setLocation(500,500);
 
        // Add the buttons and result label to the content pane
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.setSize(250, 1500);
+        c.add(playerScoreD);
         c.add(rockButton);
         c.add(paperButton);
         c.add(scissorsButton);
@@ -156,18 +160,16 @@ public class HRPS extends JFrame implements ActionListener {
                 || (playerChoice.equals("spock") && computerChoice.equals("rock"))
                 || (playerChoice.equals("lizard") && computerChoice.equals("spock"))
                 || (playerChoice.equals("lizard") && computerChoice.equals("paper"))) {
+
+                    playerScore++;
+                    playerScoreD.setText("Score: "+ playerScore);
             result = "You win!";
         } else {
             result = "Computer wins!";
 
             dispose();
             new TryAgain();
-            
-
-
-            
-
-
+        
 
 
 
@@ -177,14 +179,5 @@ public class HRPS extends JFrame implements ActionListener {
         // update result label
         resultLabel.setText("You chose " + playerChoice + ". Computer chose " + computerChoice + ". " + result);
         
-  
-
-
-        
-
-
-    
-
-}
-
+    }
 }
