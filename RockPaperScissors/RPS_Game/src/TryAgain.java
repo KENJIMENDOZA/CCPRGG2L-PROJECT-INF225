@@ -9,25 +9,21 @@ import java.beans.EventHandler;
 import java.awt.event.ActionEvent;
 
 
-
-
 public class TryAgain extends JFrame{
 TryAgain(){
 
 
         JLabel defeat = new JLabel("Would you Like to try again?");
+        defeat.setFont(new Font("Arial", Font.BOLD, 18));
 
         JButton tryAgainButton = new JButton("Try Again");
         tryAgainButton.setSize(100,100);
         EventHandler event = new EventHandler();
 
 
-
-
         tryAgainButton.addActionListener(event);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        
         
         
         this.add(tryAgainButton);
@@ -39,16 +35,9 @@ TryAgain(){
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setResizable(true);
-        this.getContentPane();
-        this.setBackground(Color.red);
+        this.getContentPane().setBackground(Color.ORANGE);;
         
-
-
-
-
-
-
-
+        
         
 
     } private class EventHandler implements ActionListener{
