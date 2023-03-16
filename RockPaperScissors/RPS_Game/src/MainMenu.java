@@ -2,63 +2,96 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.xml.stream.events.StartDocument;
+
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.beans.EventHandler;
+import java.util.Scanner;
 import java.awt.event.ActionEvent;
 
 
-class MainMenu extends JFrame{
+
+public class MainMenu extends JFrame{
+
+    
 
     MainMenu(){
         
-        JLabel Logo = new JLabel();
-        JLabel Logoname = new JLabel();
+    
+    ImageIcon pic = new ImageIcon("Logo.png");
+    JLabel Logoname= new JLabel();
+   
 
-        Logoname.setText("ROCKPAPERSCISSORS GAME!!");
-        Logoname.setHorizontalTextPosition(JLabel.CENTER);
-        Logoname.setVerticalTextPosition(JLabel.TOP);
-        Logoname.setVerticalAlignment(JLabel.TOP);
-        Logoname.setHorizontalAlignment(JLabel.CENTER);
-        Logoname.setFont(new Font("ARIAL", Font.BOLD, 50));
-        Logoname.setLocation(800, 800);
+    Logoname.setText("ROCKPAPERSCISSORS GAME!!");
+    Logoname.setHorizontalTextPosition(JLabel.CENTER);
+    Logoname.setVerticalTextPosition(JLabel.TOP);
+    Logoname.setVerticalAlignment(JLabel.TOP);
+    Logoname.setHorizontalAlignment(JLabel.CENTER);
+    Logoname.setLocation(700,700);
+   
 
-        JButton startButton = new JButton("Start Game");
 
-        startButton.setText("Start Game");
-        startButton.setFont(new Font("Arial", Font.BOLD, 25));
-        startButton.setSize(100, 100);
-        startButton.setBounds(100, 100, 250, 250);
-        startButton.setLocation(800, 380);
-        startButton.setVerticalTextPosition(JButton.CENTER);
-        startButton.setHorizontalTextPosition(JButton.CENTER);
-        startButton.setLayout(new FlowLayout());
-        startButton.setFocusable(false);
+    JLabel Devs = new JLabel("This game was made by: Carl Jay Margate, GiannCarlo Alcantara, Kenji Mendoza");
+    Devs.setLocation(300,300);
+    Devs.setVerticalTextPosition(JLabel.BOTTOM);
+    Devs.setHorizontalTextPosition(JLabel.CENTER);
+    Devs.setVerticalAlignment(JLabel.BOTTOM);
+    Devs.setHorizontalAlignment(JLabel.CENTER);
+    Devs.setIcon(pic);
+   
+    
+    JButton startButton= new JButton("Start Game");
 
-        EventHandler startHandler = new EventHandler();
+    startButton.setText("Start Game");
+    startButton.setFont(new Font("Arial", Font.BOLD, 25));
+    startButton.setSize(100,100);
+    startButton.setBounds(50, 50, 250, 50);
+    startButton.setLocation(300, 380);
+    startButton.setVerticalTextPosition(JButton.CENTER);
+    startButton.setHorizontalTextPosition(JButton.CENTER);
+    startButton.setLayout(new FlowLayout());
+    startButton.setFocusable(false);
 
-        startButton.addActionListener(startHandler);
+    EventHandler startHandler= new EventHandler();
 
-        this.add(startButton);
-        this.add(Logoname);
+    startButton.addActionListener(startHandler);
 
-        this.setTitle("RockPaperScissors");
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(800, 800);
-        this.setLocationRelativeTo(null);
-        this.setVisible(true);
-        this.setResizable(true);
-        this.getContentPane().setBackground(Color.cyan);
-    }
+    this.add(startButton);
+    this.add(Logoname);
+    this.add(Devs);
+    
+    this.setTitle("RockPaperScissors");
+    this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    this.setSize(900,900);
+    this.setLocationRelativeTo(null);
+    this.setVisible(true);
+    this.setResizable(true);
+    this.getContentPane();
+    
 
-    private class EventHandler implements ActionListener {
-
-        public void actionPerformed(ActionEvent event) {
-            new ColorMenu();
-            dispose();
-        }
-    }
+    
 }
 
+    private class EventHandler implements ActionListener{
+
+
+     public void actionPerformed(ActionEvent event){
+
+        new ColorMenu();
+
+        dispose();
+
+
+
+    }
+
+
+    }
+
+
+}
    
 
