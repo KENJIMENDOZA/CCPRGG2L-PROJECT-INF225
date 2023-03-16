@@ -43,7 +43,7 @@ class ColorMenu extends JFrame{
         this.setLocationRelativeTo(null);       
         this.setVisible(true);        
         this.setResizable(false);        
-        this.getContentPane().setBackground(Color.CYAN);
+        this.getContentPane().setBackground(Color.WHITE);
     }
     
     private class EventHandler implements ListSelectionListener{
