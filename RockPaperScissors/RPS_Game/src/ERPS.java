@@ -103,7 +103,7 @@ class ERPS extends JFrame implements ActionListener {
        // Add the buttons and result label to the content pane
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
-        c.setSize(250, 1500);
+        c.setSize(900, 900);
         c.add(playerScoreD);
         c.add(rockButton);
         c.add(paperButton);
