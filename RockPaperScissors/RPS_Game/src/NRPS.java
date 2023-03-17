@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 
+
 public class NRPS extends JFrame implements ActionListener {
     private JButton rockButton;
     private JButton paperButton;
@@ -14,6 +15,10 @@ public class NRPS extends JFrame implements ActionListener {
     private int playerScore;
 
     
+
+
+
+
     static Color GBGC;
 
     NRPS(){
@@ -144,8 +149,26 @@ public class NRPS extends JFrame implements ActionListener {
             result = "You win!";
         } else {
             result = "Computer wins!";
+
+
+            rockButton.setEnabled(false);
+            paperButton.setEnabled(false);
+            scissorsButton.setEnabled(false);
+            spockButton.setEnabled(false);
+
+
             dispose();
+
+
+
+
+
+
+
+            
             new TryAgain();
+
+            
 
 
 
@@ -160,5 +183,3 @@ public class NRPS extends JFrame implements ActionListener {
 }
 
 }
-
-
