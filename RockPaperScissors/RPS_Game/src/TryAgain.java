@@ -34,7 +34,7 @@ TryAgain(){
         this.setSize(300,300);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-        this.setResizable(true);
+        this.setResizable(false);
         this.getContentPane().setBackground(Color.ORANGE);;
         
         
