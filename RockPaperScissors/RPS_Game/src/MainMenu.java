@@ -68,7 +68,7 @@ public class MainMenu extends JFrame{
     this.setSize(900,900);
     this.setLocationRelativeTo(null);
     this.setVisible(true);
-    this.setResizable(true);
+    this.setResizable(false);
     this.getContentPane();
     
 
@@ -86,10 +86,19 @@ public class MainMenu extends JFrame{
 
 
 
+
     }
 
 
-    }
+
+
+}
+
+
+
+
+
+
 
 
 }
