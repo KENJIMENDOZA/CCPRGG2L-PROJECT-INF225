@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -179,5 +178,14 @@ public class HRPS extends JFrame implements ActionListener {
         // update result label
         resultLabel.setText("You chose " + playerChoice + ". Computer chose " + computerChoice + ". " + result);
         
-    }
+  
+
+
+        
+
+
+    
+
+}
+
 }
